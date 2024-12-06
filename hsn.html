@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShipKrate</title>
+<link rel="stylesheet" href="common/css/bootstrap.min.css" />
+<link rel="stylesheet" href="common/css/style.css" />
+<link rel="stylesheet" href="common/css/hsn.css" />
+<link rel="stylesheet" href="common/css/responsive.css" />
+</head>
+<body>
+
+    <section class="main">
+      <header>
+         <section class="container">
+          <div class="row">
+         <div class="col-md-2">
+           <a href="home.html" class="logo"><img src="common/images/header-logo.svg" alt="logo"></a>
+         </div>
+         <div class="col-md-10">
+            <ul class="header-menu">
+               <li><a href="#">Product</a></li>
+               <li><a href="hsn.html">Tools</a></li>
+               <li><a href="about.html">Company</a></li>
+               <li><a href="#">Contact Us</a></li>
+               <li><a href="#" class="login-signup">Login/Signup</a>
+                  <ul class="dropdown-box">
+                     <li><a href="#">Customer</a></li>
+                     <li><a href="#">Partner</a></li>
+                   </ul>
+                 
+               </li>
+            </ul>
+         </div>
+   
+         </div>
+          </div>
+         </section>
+      </header>
+
+
+<section class="HSN-search-container">
+<div class="container">
+<div class="row">
+    <div class="col-md-12 col-lg-12  col-xl-12 col-xxl-12 text-center">
+        <h2>Find HSN or ITC HS code by product name or HSN code.</h2>
+        <div class="category-search">
+            <div class="all-category" id="toggleButton">
+                <span>All Category</span>
+            </div>
+            <div class="category-list" id="category-list">
+                <ul>
+                    <li data-target="folder1">
+                        <a href="#">Animal Products <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder2">
+                        <a href="#">Vegetable Products <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder3">
+                        <a href="#">Animal or Vegetable Oils <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder4">
+                        <a href="#">Prepared Food, Beverages, Spirits, Tobacco <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder5">
+                        <a href="#">Minerals <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder6">
+                        <a href="#">Chemical Products <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder7">
+                        <a href="#">Plastics, Rubber, and Articles Thereof <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder8">
+                        <a href="#">Wood Products <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder9">
+                        <a href="#">Wood Materials <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li data-target="folder10">
+                        <a href="#">Textiles <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Miscellaneous <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Stones, Glass, & Ceramics <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Pearls, Precious Metals & Stones, Coins, Imitation Jewellery <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Base Metal <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Machinery <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Vehicles, Aircraft, Vessels, and Associated Transport Equipment <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Optical, Photographic, Cinematographic, & Others <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Arms and Ammunition, Parts and Accessories Thereof <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Miscellaneous Manufactured Articles <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Works of Art, Collectors’ Pieces and Antiques <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                    <li>
+                        <a href="#">Services <img src="common/images/black-arrow.svg" alt="arrow" class="arrow"/></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="data-list">
+                <div id="folder1" class="folder">
+                    <ul>
+                      <li><a href="#">01 Live Animals; Animal Products</a></li>
+                      <li><a href="#">02 Meat and edible meat offal</a></li>
+                    <li><a href="#">03 Fish and crustaceans, molluscs and other aquatic invertebrates</a></li>
+                     <li><a href="#">04 Dairy produce; birdsâ€™ eggs; natural honey; edible products of animal origin, not elsewhere specified or included</a></li>
+                     <li><a href="#">05 Products of animal origin, not elsewhere specified or included</a></li>
+                    </ul>
+                </div>
+                <div id="folder2" class="folder">
+                    <ul>
+                        <li><a href="#"> 06 Vegetable Products</a></li>
+                        <li><a href="#"> 07 Edible vegetables and certain roots and tubers</a></li>
+                        <li><a href="#"> 08 Edible fruit and nuts; peel of citrus fruit or melons</a></li>
+                        <li><a href="#">09 Coffee, tea, mate and spices</a></li>
+                        <li><a href="#">10 Cereals</a></li>
+                        <li><a href="#">11 Products of the milling industry; malt; starches; inulin; wheat gluten</a></li>
+                        <li><a href="#">12 Oil seeds and oleaginous fruits, miscellaneous grains, seeds and fruit; industrial or medicinal plants; straw and fodder</a></li>
+                        <li><a href="#">13 Lac; gums, resins and other vegetable saps and extracts</a></li>
+                        <li><a href="#">14 Vegetable plaiting materials; vegetable products not elsewhere specified or included</a></li>
+                    </ul>
+                </div>
+                <div id="folder3" class="folder">
+                    <h3>Folder 3</h3>
+                    <p>Content for Folder 3</p>
+                </div>
+            </div>
+            <span class="search">
+               <input type="text" placeholder="Enter HSN Code or product description">
+               <img src="common/images/search-hsn.svg" alt="search-icon" />
+            </span>
+        </div>
+
+        <div class="frequently-search">
+          <label>Frequently Searched:</label>
+          <ul class="tags">
+            <li>Sugar</li>
+            <li>Battery</li>
+            <li>Furniture</li>
+            <li>Rice</li>
+            <li>Sugar</li>
+          </ul>
+        </div>
+
+    </div>
+</div>
+</div>
+</section>
+
+
+<section class="HSN-content-container">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12  col-xl-12 col-xxl-12 inner">
+            <div class="text-group">
+                <h3>Understanding HSN Codes: A Simplified Guide</h3>
+                <p>HSN (Harmonized System of Nomenclature) codes are a standardized system of names and numbers to classify products for customs tariffs, freight rates, and statistical purposes. These codes are essential for businesses involved in international trade, as they impact duties, taxes, and other regulatory requirements.</p>
+            </div>
+
+            <div class="text-group">
+             <h3>Why Are HSN Codes significant?</h3>
+             <ul>
+             <li><b>1. Accurate Customs Duty Calculation:</b> Correct HSN codes ensure accurate calculation of customs duties and taxes, preventing unnecessary financial burdens. </li>
+            <li><b>2. Smooth Customs Clearance:</b> Proper classification speeds up customs clearance processes, reducing delays and costs.</li> 
+            <li><b>3. GST Compliance:</b> HSN codes are essential for GST compliance, as they determine the applicable GST rates and exemptions.</li>
+            <li><b>4. Statistical Analysis:</b> HSN codes help analyse trade data and formulate trade policies.</li>
+           </ul>
+            </div>
+
+            <div class="text-group">
+                <h3>Who Needs HSN Codes and Who Provides Them?</h3>
+                <span>Understanding the Importance of HSN Codes</span>
+                <p>HSN (Harmonized System of Nomenclature) codes are a standardized system of names and numbers used to classify products for customs tariffs, freight charges, and other statistical purposes. These codes are essential for businesses involved in international trade, as they impact duties, taxes, and other regulatory requirements.</p>
+            </div>
+
+            <div class="text-group">
+                <span>Who Needs HSN Codes?</span>
+                <p>Essentially, any business involved in import or export activities needs to understand and use HSN codes. This includes:</p>
+                <ul>
+                    <li><b>• Manufacturers:</b> To correctly classify their products for both domestic and international sales. </li>
+                    <li><b>• Importers:</b> To determine the applicable customs duties and taxes on imported goods.</li>
+                    <li><b>• Exporters:</b> To ensure accurate classification of exported products and comply with customs regulations.</li>
+                    <li><b>• Logistics Providers:</b> To facilitate smooth customs clearance and transportation of goods.</li>
+                    <li><b>• Customs Brokers:</b> To assist clients in the accurate classification of goods and preparation of customs documentation.</li>
+                </ul>
+            </div>
+
+            <div class="text-group">
+            <span>Who Provides HSN Codes?</span>
+            <p>While there’s no single global authority that directly assigns HSN codes, various organizations and resources can help you identify the correct code for your products:</p>
+            <strong>1. Customs Authorities:</strong>
+            <ul class="bullets">
+                <li>Central Board of Indirect Taxes and Customs (CBIC): In India, the CBIC is the primary authority for customs matters and provides guidelines and interpretations for HSN code classification.</li>
+                <li>Customs Authorities in Other Countries: Each country has its own customs authority that administers its customs laws and regulations, including HSN code classification.</li>
+            </ul>
+            <strong>2. Consultants and Experts:</strong>
+            <ul class="bullets">
+                <li><b>Customs Brokers:</b> Experienced customs brokers can assist in determining the correct HSN codes for your products.</li>
+                <li><b>HSN Code Consultants:</b> Specialized consultants can provide expert advice on HSN code classification, especially for complex products.</li>
+            </ul>
+            <strong>3. Online Resources:</strong>
+            <ul class="bullets">
+                <li><b>Government Websites:</b> Many government websites offer online tools and databases to search for HSN codes based on product descriptions.</li>
+                <li><b>Industry Associations:</b> Industry associations may provide guidance and resources on HSN code classification.</li>
+            </ul>
+            </div>
+
+            <div class="text-group">
+                <span>The Importance of Accurate HSN Code Assignment</span>
+                <p>Using the correct HSN code is crucial for several reasons:</p>
+                <ul class="bullets">
+                    <li><b>Smooth Customs Clearance:</b> Incorrect HSN codes can lead to delays and complications at customs.</li>
+                    <li><b>Accurate Duty and Tax Calculation:</b> Proper HSN code assignment ensures correct calculation of customs duties and taxes.</li>
+                    <li><b>Statistical Data:</b> Accurate HSN codes contribute to reliable statistical data on international trade.</li>
+                </ul>
+                <p>By understanding the importance of HSN codes and seeking expert advice when necessary, businesses can optimize their international trade operations and minimize compliance risks.</p>
+            </div>
+
+            <div class="text-group">
+                <h3>How HSN Codes Work</h3>
+                <p>HSN codes are structured hierarchically, with each digit representing a specific level of classification. For instance:</p>
+                <ul class="bullets">
+                    <li><b></b>First two digits: Broad category (e.g., 01 for live animals)</li>
+                    <li><b></b>First four digits: More specific category (e.g., 0101 for live horses, asses, mules and hinnies)</li>
+                    <li><b></b>First six digits: Even more specific category (e.g., 010110 for live horses)</li>
+                </ul>
+            </div>
+
+            <div class="text-group">
+                <h3>How HSN Codes Work</h3>
+                <ul class="bullets">
+                    <li><b>Mobile Phones:</b> 85171210</li>
+                    <li><b>Car:</b> 8703 2310</li>
+                    <li><b>Rice:</b> 1006 1000</li>
+                    <li><b>Computers:</b> 8471 3010</li>
+                </ul>
+            </div>
+
+            <div class="text-group">
+                <h3>Tips for Effective HSN Code Usage:</h3>
+                <ul class="bullets">
+                    <li><b>Product Description:</b> Provide a detailed description of your product, including its material, function, and intended use.</li>
+                    <li><b>Refer to Customs Manuals:</b> Consult the customs manual for specific guidance on classifying your products.</li>
+                    <li><b>Cross-Reference with Similar Products:</b> To identify the appropriate HSN code, compare your product with similar products.</li>
+                    <li><b>Seek Clarification from Customs Authorities:</b> If you are unsure about the correct HSN code, seek clarification from customs officials.</li>
+                    <li><b>Consider Hiring HSN Code Consultants:</b> Hiring a specialized consultant can save time and effort for complex product classifications.</li>
+                </ul>
+            </div>
+            
+            <h3>HSN - wise summary of outward supplies</h3>
+            <p><b>Chapter wise distribution of goods using HSN codes</b></p>
+
+            <table>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td><b>Commoditiews</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Secton1:Animals</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 1</b></td>
+                    <td>Animals</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 2</b></td>
+                    <td>Meat and edible offal</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 3</b></td>
+                    <td>Fish, molluscs, crustaceans, and other aquatic invertebrates</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 4</b></td>
+                    <td>Dairy produce, birds’ eggs, honey and other edible products of animal origin that are not specified elsewhere</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 5</b></td>
+                    <td>Other products of animal origin that are not specified elsewhere</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section II. Vegetables and Vegetable Products</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 6</b></td>
+                    <td>Live trees and plants, bulbs, roots, etc., cut flowers and ornamental foliage</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 7</b></td>
+                    <td>Edible vegetables, certain roots and tubers</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 8</b></td>
+                    <td>Edible fruit and nuts, the peel of citrus fruits or melons</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 9</b></td>
+                    <td>Tea, coffee, mate and spices</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 10</b></td>
+                    <td>Cereals</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 11</b></td>
+                    <td>Milling products, malt, wheat gluten, starches, and inulin</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 12</b></td>
+                    <td>Oil seeds and oleaginous fruits, grains, straw and fodder, seeds and fruit, and industrial or medicinal plants</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 13</b></td>
+                    <td>Lac, gum, resin, and other saps and extracts</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 14</b></td>
+                    <td>Vegetable plaiting materials, and vegetable products that are not specified elsewhere</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section III. Animal or Vegetable Oils, Their Cleavage Products, Waxes, and Prepared Edible Fats</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 15</b></td>
+                    <td>Animal or vegetable oils, their cleavage products, waxes, and prepared edible fats</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section IV. Prepared Food, Beverages, Spirits, Tobacco and Tobacco Substitutes</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 16</b></td>
+                    <td>Preparation of meat, fish or crustaceans, molluscs, or any other aquatic invertebrates</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 17</b></td>
+                    <td>Sugar and sugar confectionery</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 18</b></td>
+                    <td>Cocoa and cocoa preparations</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 19</b></td>
+                    <td>Preparations of cereals, starch, flour, milk, and pastry products</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 20</b></td>
+                    <td>Preparation of vegetables, fruits, nuts, or plant parts</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 21</b></td>
+                    <td>Miscellaneous edible preparations</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 22</b></td>
+                    <td>Beverages, vinegar, and spirits</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 23</b></td>
+                    <td>Residue and food waste, prepared animal fodder</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 24</b></td>
+                    <td>Tobacco and tobacco substitutes that are manufactured</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section V. Minerals</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 25</b></td>
+                    <td>Salt, earths and stones, sulphur, plastering material, lime, and cement</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 26</b></td>
+                    <td>Ores, slag, and ash</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 27</b></td>
+                    <td>Mineral fuel, mineral oils and products of their distillation, mineral waxes, and bituminous substances</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section VI. Chemical Products or of Allied Industries</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 28</b></td>
+                    <td>Inorganic chemicals, organic or inorganic compounds of precious metals, rare-earth metals, radioactive elements, or isotopes</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 29</b></td>
+                    <td>Organic chemicals</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 30</b></td>
+                    <td>Pharmaceutical products</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 31</b></td>
+                    <td>Fertilisers</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 32</b></td>
+                    <td>Tanning or dyeing extracts, tannins and their derivatives, dyes, pigments, and other colouring matter, varnishes and paints, inks, putty and other mastics</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 33</b></td>
+                    <td>Essential oils and resinoids, cosmetic or toilet preparations, perfumery</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 34</b></td>
+                    <td>Soap, washing preparations, organic surface-active agents, lubricating preparations, prepared waxes, artificial waxes, polishing or scouring preparations, candles and similar items, modelling pastes, dental preparations and dental waxes with a basis of plaster</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 35</b></td>
+                    <td>Albuminoidal substances, glues, enzymes, and modified starches</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 36</b></td>
+                    <td>Explosives, pyrotechnic products, pyrophoric alloys, certain combustible preparations, and matches</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 37</b></td>
+                    <td>Photographic or cinematographic goods</td>
+                </tr>
+                <tr>
+                    <td><b>Chapter 38</b></td>
+                    <td>Miscellaneous chemical products</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section VII. Plastics, Rubber, and Articles Thereof</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section VIII. Raw Hides and Skins, Furskins and Articles Thereof, Leather, and Related Goods</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section IX. Wood and Wooden Articles, Wood Charcoal, Cork and Articles of Cork, Basket Ware and Wickerwork, Manufacturers of Straw, Esparto or Other Plaiting Material</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section X. Pulp of Wood or Other Fibrous Cellulosic Material, Recovered Paper or Paperboard (Waste and Scrap), Paper and Paperboard and Articles Thereof</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XI. Textile and Textile Articles</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XII. Footwear, Headgear, Umbrellas, Walking Sticks and Seat Sticks, Whips, Riding Crops and Parts Thereof, Artificial Flowers, Articles of Human Hair, Prepared Feathers and Articles Made Thereof</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XIII. Articles Made of Stone, Plaster, Asbestos, Cement, Mica, or Other Similar Materials, Glass and Glassware, Ceramic Products</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XIV. Natural or Cultured Pearls, Precious Metals Clad With Precious Metal and Articles Thereof, Precious or Semi-Precious Stones, Coins, Imitation Jewellery</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XV. Base Metal and Articles Made of Base Metal</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XVI. Machinery and Mechanical Appliances, Electrical Equipment and Parts Thereof, Sound Reproducers and Recorders, Television Image and Sound Reproducers and Recorders, and Parts and Accessories of Such Articles</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XVII. Vehicles, Aircraft, Vessels, and Associated Transport Equipment</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XVIII. Optical, Photographic, Cinematographic, Checking, Measuring, Precision, Medical or Surgical Instruments and Apparatus, Musical Instruments, Clocks and Watches, Parts and Accessories Thereof</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XIX. Arms and Ammunition, Parts and Accessories Thereof</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XX. Miscellaneous Manufactured Articles</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><h5>Section XXI. Works of Art, Collectors’ Pieces and Antiques</h5></td>
+                </tr>
+                <tr>
+                    <td><b>Chapter</b></td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
+                </tr>
+                
+            </table>
+
+        </div>
+    </div>
+    </div>
+</section>
+
+   
+
+   
+
+
+   
+   
+
+   
+
+   
+
+
+   
+   
+ 
+   
+   <footer>
+      <section class="grey-container">
+         <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+             <div class="links-row">
+               <h4>Products <a href="#">View More <img src="common/images/view-more-arrow.svg" alt="icon" class="arrow-icon"></a></h4>
+               <ul class="page-links">
+                  <li><a href="#">Ocean Freight Search</a></li>
+                  <li><a href="#">Ocean FCL</a></li>
+                  <li><a href="#">Ocean LCL</a></li>
+                  <li><a href="#">Customs and Handling</a></li>
+                  <li><a href="#">Trailer & Rail Container Haulage</a></li>
+                  <li><a href="#">FTL, PTL, Rail</a></li>
+                  <li><a href="#">Freight Rates & Schedules</a></li>
+                  <li><a href="#">Tracking & Visibility</a></li>
+               </ul>
+             </div>
+   
+             <div class="links-row">
+               <h4>Partners <a href="#">View More <img src="common/images/view-more-arrow.svg" alt="icon" class="arrow-icon"></a></h4>
+               <ul class="page-links">
+                  <li><a href="#">Global Partner Network</a></li>
+                  <li><a href="#">Freight Forwarders</a></li>
+                  <li><a href="#">Transporters</a></li>
+                  <li><a href="#">Custom Agents</a></li>
+                  <li><a href="#">Overseas Agents</a></li>
+               </ul>
+             </div>
+   
+             <div class="links-row">
+               <h4>Tools <a href="#">View More <img src="common/images/view-more-arrow.svg" alt="icon" class="arrow-icon"></a></h4>
+               <ul class="page-links">
+                  <li><a href="#">Rate Discovery</a></li>
+                  <li><a href="#">Tracking</a></li>
+                  <li><a href="#">HS Code Finder</a></li>
+                  <li><a href="#">Personal Key Manager</a></li>
+               </ul>
+             </div>
+             <div class="links-row">
+               <h4>Company <a href="#">View More <img src="common/images/view-more-arrow.svg" alt="icon" class="arrow-icon"></a></h4>
+               <ul class="page-links">
+                  <li><a href="#">Company</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Work with Us</a></li>
+                  <li><a href="#">Newsroom</a></li>
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Signup</a></li>
+                  <li><a href="#">Blogs</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+               </ul>
+             </div>
+            </div>
+          </div>
+         </div>
+      </section>
+   
+   
+      <section class="blue-container">
+         <div class="container">
+          <div class="row">
+            <h4>Contact Us</h4>
+            <div class="col-md-9 col-lg-9 col-xl-9 col-xxl-9">
+               <ul class="contact-links">
+                  <li><img src="common/images/envelop.svg" alt="icon"><a href="mailto:info@shipkrates.com">info@shipkrates.com</a></li>
+                  <li><img src="common/images/pin-map.svg" alt="icon"><p>A1/B, VDS, Sector 16, NOIDA, Gautam Budh Nagar, Uttar Pradesh 201301, India</p></li>
+                  <li><img src="common/images/envelop.svg" alt="icon"><a href="mailto:support@shipkrates.com">support@shipkrates.com</a></li>
+                  <li><img src="common/images/tel.svg" alt="icon"><a href="tel:+91 97119 49529">+91 97119 49529</a></li>
+               </ul>
+   
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+               <h4>Follow Us On</h4>
+               <ul class="social-media">
+                 <li><a href="#"><img src="common/images/twitter.svg" alt="icon"></a></li>
+                 <li><a href="#"><img src="common/images/insta.svg" alt="icon"></a></li>
+                 <li><a href="#"><img src="common/images/youtube.svg" alt="icon"></a></li>
+                 <li><a href="#"><img src="common/images/facebook.svg" alt="icon"></a></li>
+                 <li><a href="#"><img src="common/images/linkedin.svg" alt="icon"></a></li>
+               </ul>
+            </div>
+         </div>
+        </div>
+     </section>
+   
+   
+   
+     <section class="grey-container">
+      <div class="container">
+       <div class="row">
+         <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <ul class="foot-links">   
+               <li><a href="#">Kandla to Hamad Bandar</a></li>
+               <li><a href="#">Abbas to Kandla</a></li>
+               <li><a href="#">Zhongshan to Hazira</a></li>
+               <li><a href="#">Shenzhen to Hazira</a></li>
+               <li><a href="#">Foshan to Hazira</a></li>
+               <li><a href="#">Hazira to Napier</a></li>
+               <li><a href="#">Tianjin Xingang (CNTXG) to Hazira</a></li>
+               <li><a href="#">Nansha Pt to Hazira</a></li>
+               <li><a href="#">Hazira to Trieste</a></li>
+               <li><a href="#">Hazira to Thessaloniki</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <ul class="foot-links">
+               <li><a href="#">Hazira to Fos</a></li>
+               <li><a href="#">sur Mer Hazira to Antwerp</a></li>
+               <li><a href="#">Hazira to Alexandria</a></li>
+               <li><a href="#">Hazira to Ravenna</a></li>
+               <li><a href="#">Hazira to Gdynia</a></li>
+               <li><a href="#">Ningbo (CN) to Hazira</a></li>
+               <li><a href="#">Gaolan to Hazira</a></li>
+               <li><a href="#">Hazira to Barcelona</a></li>
+               <li><a href="#">Hazira to Damietta</a></li>
+               <li><a href="#">Dalian to Hazira</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <ul class="foot-links">
+                       
+               <li><a href="#">Qingdao to Hazira</a></li>
+               <li><a href="#">Hazira to Klaipeda</a></li>
+               <li><a href="#">Shanghai to Hazira</a></li>
+               <li><a href="#">Hazira to Hai Phong</a></li>
+               <li><a href="#">Hazira to Izmir</a></li>
+               <li><a href="#">Hazira to Ambarli</a></li>
+               <li><a href="#">Guangzhou to Hazira</a></li>
+               <li><a href="#">Hazira to Bari</a></li>
+               <li><a href="#">Hazira to Leixoes</a></li>
+               <li><a href="#">Skeldon to Hazira</a></li>
+            </ul>
+         </div>
+         <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <ul class="foot-links">
+               <li><a href="#">Qingdao to Hazira</a></li>
+               <li><a href="#">Hazira to Klaipeda</a></li>
+               <li><a href="#">Shanghai to Hazira</a></li>
+               <li><a href="#">Hazira to Hai Phong</a></li>
+               <li><a href="#">Hazira to Izmir</a></li>
+               <li><a href="#">Hazira to Ambarli</a></li>
+               <li><a href="#">Guangzhou to Hazira</a></li>
+               <li><a href="#">Hazira to Bari</a></li>
+               <li><a href="#">Hazira to Leixoes</a></li>
+               <li><a href="#">Skeldon to Hazira</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <p class="copyright">©2024 Shipkrate. All Rights Reserved</p>
+         </div>
+      </div>
+     </div>
+   </section>
+   
+   </footer>
+   
+   </section>
+   
+
+   <script>
+    // JavaScript to handle hover events
+    const categoryLinks = document.querySelectorAll('.category-list ul li a');
+    const dataList = document.querySelector('.data-list');
+    categoryLinks.forEach((link) => {
+        link.addEventListener('mouseenter', () => {
+            dataList.classList.add('data-visible');
+        });
+
+        // link.addEventListener('mouseleave', () => {
+        //    dataList.classList.remove('data-visible');
+        // });
+    });
+</script>
+
+
+
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function () {
+        const categorylist = document.getElementById('category-list');
+        categorylist.classList.toggle('show');
+    });
+</script>
+
+<script>
+const menuItems = document.querySelectorAll('.category-list ul li');
+const folders = document.querySelectorAll('.folder');
+
+// Add hover event to menu items
+menuItems.forEach(item => {
+    item.addEventListener('mouseover', () => {
+        // Hide all folders
+        folders.forEach(folder => folder.classList.remove('active'));
+        
+        // Get the target folder ID from data attribute
+        const targetId = item.getAttribute('data-target');
+        const targetFolder = document.getElementById(targetId);
+        
+        // Show the corresponding folder
+        if (targetFolder) {
+            targetFolder.classList.add('active');
+        }
+    });
+});
+
+</script>
+
+
+
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script type="text/javascript" src="common/js/custom.js"></script>
+      <script type="text/javascript" src="common/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

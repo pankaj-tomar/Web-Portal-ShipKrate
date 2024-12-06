@@ -20,6 +20,16 @@ $(function () {
   }); 
 });
 
+
+
+/*******************************************/
+$( document ).ready(function() {
+  $('.data-list').mouseleave(function() {
+    $('.data-list').removeClass("data-visible");
+});
+
+});
+
 /*******************************************/
 $( document ).ready(function() {
   // tabbed content
@@ -37,6 +47,9 @@ $( document ).ready(function() {
     $(this).addClass("active");
 
   });
+  
+
+
 });
 
 /*************************************** */

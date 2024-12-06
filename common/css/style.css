@@ -182,7 +182,7 @@ header.sticky .dropdown-box{top: 45px ;}
 		background: #48217A;
 	}
 	header.sticky .logo img{max-width: 110px; transition: all 0.4s ease; filter: brightness(0) invert(1);}
-	header.sticky ul.header-menu > li{font-size: 14px;}
+
 	header.sticky ul.header-menu > li > a{color:#fff;}
 	header.sticky ul.header-menu > li > a.login-signup{background:#fff; color:#48217A;}
 	header.sticky .dropdown-box{min-width:105px;}
