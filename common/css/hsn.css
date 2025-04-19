@@ -230,4 +230,77 @@ z-index: 1;
 	text-align: center;
 }
 
+.add-box {width: 100%; display: flex; gap: 20px; flex-direction: column;}
+.add-box img{width: 100%; height: auto;} 
 
+.HSN-content-container .striped{border:0; background: #fafbff; margin-bottom: 15px;}
+.HSN-content-container .striped tr th{background:#8540d6; color:#fff; padding: 15px 20px; font-size: 18px; line-height: 25px;}
+.HSN-content-container .striped tr th:first-child{width:125px; border-radius: 15px 0 0 0;}
+.HSN-content-container .striped tr th:last-child{ border-radius: 0 15px 0 0;}
+.HSN-content-container .striped tr td{border: 0;}
+.HSN-content-container .striped tr td:first-child b{color: #745fba;}
+.HSN-content-container .striped tr:nth-child(odd) td{background: #fff;}
+.HSN-content-container .striped tr td:first-child b{color: #745fba;}
+.HSN-content-container .striped tr td .view {
+	min-width: 90px;
+	background: #903BDE;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+	color: #fff;
+	border: 0;
+	border-radius: 6px;
+	cursor: pointer;
+	-webkit-transition: all 0.3s ease-in;
+	-ms-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.HSN-content-container .striped tr td .view:hover{background:#4E1E7E;}
+.left-content{padding-right: 30px;}
+.bottom-pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin: 30px 0;
+	justify-content: space-between;
+	align-items: center;
+}
+.bottom-pagination li{font-size: 12px; line-height: 14px;}
+.HSN-blue-container{background: #48217a; padding:80px 0; }
+.HSN-blue-container h5 {
+	text-align: center;
+	font-size: 30px;
+	line-height: 35px;
+	margin-bottom:35px;
+	font-weight: 500;
+	color: #fff;
+}
+
+.HSN-blue-container .box {
+	width: 100%;
+	background: #fff;
+	padding: 25px;
+	min-height: 230px;
+	border-radius: 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 15px;
+}
+.HSN-blue-container .box strong{font-size: 20px; line-height: 24px; font-weight: 600; margin-bottom: 10px;}
+.HSN-blue-container .box p{font-size: 20px; line-height: 24px; font-weight:400;}
+
+.HSN-blue-container .box figure{width:70px; height: 70px; border-radius: 6px; margin: 0 auto; display: flex; align-items: center; justify-content: center; padding:10px;}
+.HSN-blue-container .box figure img{max-height: 50px;}
+.HSN-blue-container .box .iso{background:#FFFBDD;}
+.HSN-blue-container .box .minimal{background:#E0FFE3;}
+.HSN-blue-container .box .instant{background:#FFD8EA;}
+.HSN-blue-container .box .visibility{background:#DFDDFF;}
