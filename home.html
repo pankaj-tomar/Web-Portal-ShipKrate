@@ -8,6 +8,59 @@
   <link rel="stylesheet" href="common/css/style.css" />
   <link rel="stylesheet" href="common/css/home.css" />
   <link rel="stylesheet" href="common/css/responsive.css" />
+    <style>
+#chartdiv {
+	width: 100%;
+	height: 494px;
+	background-color: #48217a;
+	max-width: 100%;
+	margin: 30px 0 0 0;
+}
+    g[aria-labelledby^="id-79-title"] {
+    display: none !important;
+  }
+/*
+ .map-container {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	height: 100%;
+	background: #faf5ff;
+	margin-top: 28px;
+	max-height: 492px;
+}
+
+.map-image {
+	width: 100%;
+	display: block;
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+    .point {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: red;
+      border-radius: 50%;
+      animation: blink 1s infinite;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    .point1 { top: 217px; right:480px; }
+    .point2 { top:70px; left: 215px; }
+    .point3 { top:100px; right:230px; }
+    .point4 { top: 235px; left: 435px; }
+	.point5 { top: 360px; left: 206px; }
+	.point6 { top:382px; right:200px; }
+   */
+  </style>
   </head>
  <body>
 
@@ -506,7 +559,18 @@
       </div>
      </div>
      <div class="col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-      <div id="threejs-container"></div>
+      <div id="chartdiv"></div>
+	 
+   <div id="threejs-container" style="display:none"></div>
+	<div class="map-container" style="display:none">
+    <img src="common/images/world-map.png" alt="World Map" class="map-image">
+    <div class="point point1"></div>
+    <div class="point point2"></div>
+    <div class="point point3"></div>
+    <div class="point point4"></div>
+	<div class="point point5"></div>
+    <div class="point point6"></div>
+  </div>
      </div>
      </div>
     </div>
@@ -964,6 +1028,121 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
    <script type="text/javascript" src="common/js/custom.js"></script>
    <script type="text/javascript" src="common/js/bootstrap.bundle.min.js"></script>
+
+   <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+  <script>
+    am4core.useTheme(am4themes_animated);
+
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+    chart.geodata = am4geodata_worldLow;
+    chart.projection = new am4maps.projections.Orthographic();
+    chart.panBehavior = "rotateLongLat";
+    chart.deltaLatitude = -20;
+    chart.padding(20, 20, 20, 20);
+
+    // Polygon series for selected countries
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    polygonSeries.useGeodata = true;
+
+    polygonSeries.include = [
+      "AI", "AE", "AR", "AS", "AW", "BR", "AO", "AL", "BE", "BB", "AN", "BH",
+      "MM", "CN", "ID", "JP", "KH", "PH", "VN", "GU", "MO", "TW", "TH", "SG", "MY"
+    ];
+
+    var polygonTemplate = polygonSeries.mapPolygons.template;
+    polygonTemplate.tooltipText = "{name}";
+    polygonTemplate.fill = am4core.color("#eeeeee");
+    polygonTemplate.stroke = am4core.color("#f00");
+    polygonTemplate.strokeWidth = 0.5;
+    polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
+    polygonTemplate.url = "https://www.datadrum.com/main.php?package={id}";
+    polygonTemplate.urlTarget = "_blank";
+
+    var hs = polygonTemplate.states.create("hover");
+    hs.properties.fill = chart.colors.getIndex(0).brighten(0.5);
+
+    // Graticules
+    var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
+    graticuleSeries.mapLines.template.line.stroke = am4core.color("#ffffff");
+    graticuleSeries.mapLines.template.line.strokeOpacity = 0.2;
+    graticuleSeries.mapLines.template.line.strokeWidth = 1;
+    graticuleSeries.fitExtent = false;
+
+    chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0.1;
+    chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#ffffff");
+
+    // Rotation animation
+    let animation;
+    setTimeout(function () {
+     animation = chart.animate({ property: "deltaLongitude", to: 10000 }, 1000000); // Long spin over ~16 minutes
+}, 1000);
+
+    chart.seriesContainer.events.on("down", function () {
+      // animation.stop(); // optional to allow user to stop rotation on click
+    });
+
+    // Blinking markers on selected country centers
+    var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+    imageSeries.data = [
+      { title: "Anguilla", latitude: 18.2206, longitude: -63.0686 },
+      { title: "UAE", latitude: 24.0, longitude: 54.0 },
+      { title: "Argentina", latitude: -34.0, longitude: -64.0 },
+      { title: "American Samoa", latitude: -14.271, longitude: -170.1322 },
+      { title: "Aruba", latitude: 12.5211, longitude: -69.9683 },
+      { title: "Brazil", latitude: -10.0, longitude: -55.0 },
+      { title: "Angola", latitude: -11.2027, longitude: 17.8739 },
+      { title: "Albania", latitude: 41.1533, longitude: 20.1683 },
+      { title: "Belgium", latitude: 50.5039, longitude: 4.4699 },
+      { title: "Barbados", latitude: 13.1939, longitude: -59.5432 },
+      { title: "Netherlands Antilles", latitude: 12.2261, longitude: -69.0601 },
+      { title: "Bahrain", latitude: 26.0667, longitude: 50.5577 },
+      { title: "Myanmar", latitude: 21.9162, longitude: 95.9560 },
+      { title: "China", latitude: 35.0, longitude: 103.0 },
+      { title: "Indonesia", latitude: -5.0, longitude: 120.0 },
+      { title: "Japan", latitude: 36.2048, longitude: 138.2529 },
+      { title: "Cambodia", latitude: 12.5657, longitude: 104.991 },
+      { title: "Philippines", latitude: 13.0, longitude: 122.0 },
+      { title: "Vietnam", latitude: 14.0583, longitude: 108.2772 },
+      { title: "Guam", latitude: 13.4443, longitude: 144.7937 },
+      { title: "Macau", latitude: 22.1987, longitude: 113.5439 },
+      { title: "Taiwan", latitude: 23.6978, longitude: 120.9605 },
+      { title: "Thailand", latitude: 15.87, longitude: 100.9925 },
+      { title: "Singapore", latitude: 1.3521, longitude: 103.8198 },
+      { title: "Malaysia", latitude: 4.2105, longitude: 101.9758 }
+    ];
+
+    var imageTemplate = imageSeries.mapImages.template;
+    imageTemplate.propertyFields.latitude = "latitude";
+    imageTemplate.propertyFields.longitude = "longitude";
+
+    var circle = imageTemplate.createChild(am4core.Circle);
+    circle.radius = 6;
+    circle.fill = am4core.color("#ff0000");
+    circle.stroke = am4core.color("#fff");
+    circle.strokeWidth = 2;
+    circle.nonScaling = true;
+    circle.tooltipText = "{title}";
+
+    // Blinking animation
+    circle.defaultState.properties.scale = 1;
+    var blinkState = circle.states.create("active");
+    blinkState.properties.scale = 1.5;
+    blinkState.properties.opacity = 0.1;
+
+    imageTemplate.events.on("inited", function (event) {
+      var target = event.target;
+      setInterval(function () {
+        target.children.getIndex(0).setState("active");
+        setTimeout(function () {
+          target.children.getIndex(0).setState("default");
+        }, 500);
+      }, 1000);
+    });
+  </script>
    
 <script>
         // Get all the elements with the class 'item'
@@ -993,4 +1172,5 @@
 
 
  </body>
+ 
 </html>
