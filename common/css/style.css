@@ -263,6 +263,24 @@ header.sticky ul.header-menu>li>a.login-signup {
 header.sticky .dropdown-box {
 	min-width: 105px;
 }
+	header.sticky {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		padding: 15px 0;
+		z-index: 99;
+		box-shadow: 0px 3px 6px #00000029;
+		min-height: auto;
+		transition: all 0.3s linear;
+		z-index: 999;
+		background: #48217A;
+	}
+	header.sticky .logo img{max-width: 110px; transition: all 0.4s ease; filter: brightness(0) invert(1);}
+
+	header.sticky ul.header-menu > li > a{color:#fff;}
+	header.sticky ul.header-menu > li > a.login-signup{background:#fff; color:#48217A;}
+	header.sticky .dropdown-box{min-width:105px;}
 
 
 /*******************Footer Css***********************/
